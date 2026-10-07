@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Learn more about Ntshuxeko Tshabalala, the developer behind NtshuxekoDev, and his passion for technology, programming and web development."
+    >
+
+    <meta
+        name="author"
+        content="Ntshuxeko Tshabalala"
+    >
+
+    <title>
+        NtshuxekoDev | About
+    </title>
+
+    <!-- Flask loads CSS from the static folder -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     NAVIGATION
+================================== -->
+
+<nav aria-label="Main navigation">
+
+
+    <div class="logo">
+
+        Ntshuxeko<span>Dev</span>
+
+    </div>
+
+
+    <ul
+        class="nav-links"
+        id="navLinks"
+    >
+
+
+        <li>
+
+            <a href="/">
+                Home
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="/services">
+                Services
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a
+                href="/about"
+                class="active"
+                aria-current="page"
+            >
+                About
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="/education">
+                Education
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="/contact">
+                Contact
+            </a>
+
+        </li>
+
+
+    </ul>
+
+
+    <!-- Mobile menu button -->
+
+    <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+    >
+        ☰
+    </button>
+
+
+</nav>
+
+
+
+<!-- =================================
+     ABOUT PAGE
+================================== -->
+
+<main class="page">
+
+
+    <p class="section-label">
+        About Me
+    </p>
+
+
+    <h1>
+        Meet Ntshuxeko
+    </h1>
+
+
+    <p class="section-description">
+
+        I'm a young developer passionate about
+        technology, programming and creating
+        useful digital experiences.
+
+    </p>
+
+
+
+    <!-- =================================
+         ABOUT CONTENT
+    ================================== -->
+
+    <div class="about-card">
+
+
+        <h2>
+            Ntshuxeko Tshabalala
+        </h2>
+
+
+        <p>
+
+            I'm from Elim, Limpopo, South Africa,
+            and I have a strong passion for
+            technology, programming and web
+            development.
+
+        </p>
+
+
+        <p>
+
+            I enjoy using technology to solve
+            problems, help people and create
+            useful solutions for businesses.
+
+        </p>
+
+
+        <p>
+
+            I created NtshuxekoDev to help small
+            businesses and entrepreneurs establish
+            a professional online presence.
+
+        </p>
+
+
+        <p>
+
+            I believe a good website should look
+            modern, work well on different devices,
+            be easy to use and provide real value
+            to the people visiting it.
+
+        </p>
+
+
+        <p>
+
+            My goal is to continue developing my
+            programming and web development skills
+            while creating websites and digital
+            solutions that provide real value.
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- =================================
+         MY APPROACH
+    ================================== -->
+
+    <div class="services-cta">
+
+
+        <p class="section-label">
+            My Approach
+        </p>
+
+
+        <h2>
+            Simple. Professional. Useful.
+        </h2>
+
+
+        <p>
+
+            I focus on creating websites that
+            are easy to understand, professional
+            in appearance and useful for the
+            businesses they represent.
+
+        </p>
+
+
+        <a
+            href="/contact"
+            class="btn primary"
+        >
+            Work With Me
+        </a>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =================================
+     FOOTER
+================================== -->
+
+<footer>
+
+
+    <h3>
+        NtshuxekoDev
+    </h3>
+
+
+    <p>
+        Web development for small businesses.
+    </p>
+
+
+    <p>
+
+        &copy;
+
+        <span id="year"></span>
+
+        NtshuxekoDev
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- =================================
+     JAVASCRIPT
+================================== -->
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore NtshuxekoDev web development services for small businesses, including business websites, responsive design and modern web design."
+    >
+
+    <meta
+        name="author"
+        content="Ntshuxeko Tshabalala"
+    >
+
+    <title>
+        NtshuxekoDev | Services
+    </title>
+
+    <!-- Flask loads CSS from the static folder -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     NAVIGATION
+================================== -->
+
+<nav aria-label="Main navigation">
+
+
+    <div class="logo">
+
+        Ntshuxeko<span>Dev</span>
+
+    </div>
+
+
+    <ul
+        class="nav-links"
+        id="navLinks"
+    >
+
+
+        <li>
+
+            <a href="/">
+                Home
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a
+                href="/services"
+                class="active"
+                aria-current="page"
+            >
+                Services
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="/about">
+                About
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="/education">
+                Education
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="/contact">
+                Contact
+            </a>
+
+        </li>
+
+
+    </ul>
+
+
+    <!-- Mobile menu button -->
+
+    <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+    >
+        ☰
+    </button>
+
+
+</nav>
+
+
+
+<!-- =================================
+     SERVICES PAGE
+================================== -->
+
+<main class="page">
+
+
+    <p class="section-label">
+        What I Do
+    </p>
+
+
+    <h1>
+        Web Development Services
+    </h1>
+
+
+    <p class="section-description">
+
+        I create modern, responsive and
+        professional websites designed to
+        help small businesses build trust,
+        reach customers and grow online.
+
+    </p>
+
+
+
+    <!-- =================================
+         SERVICES
+    ================================== -->
+
+    <div class="services-container">
+
+
+        <!-- =================================
+             SERVICE 1
+        ================================== -->
+
+        <article class="service-card">
+
+
+            <div
+                class="service-number"
+                aria-hidden="true"
+            >
+                01
+            </div>
+
+
+            <h2>
+                Business Websites
+            </h2>
+
+
+            <p>
+
+                Get a professional online presence
+                for your business. I create websites
+                that clearly present your business,
+                services and contact information.
+
+            </p>
+
+
+        </article>
+
+
+
+        <!-- =================================
+             SERVICE 2
+        ================================== -->
+
+        <article class="service-card">
+
+
+            <div
+                class="service-number"
+                aria-hidden="true"
+            >
+                02
+            </div>
+
+
+            <h2>
+                Responsive Design
+            </h2>
+
+
+            <p>
+
+                Your website will be designed to
+                work smoothly on smartphones,
+                tablets and computers, giving your
+                customers a better experience
+                wherever they are.
+
+            </p>
+
+
+        </article>
+
+
+
+        <!-- =================================
+             SERVICE 3
+        ================================== -->
+
+        <article class="service-card">
+
+
+            <div
+                class="service-number"
+                aria-hidden="true"
+            >
+                03
+            </div>
+
+
+            <h2>
+                Modern Web Design
+            </h2>
+
+
+            <p>
+
+                Clean, attractive and modern designs
+                that help your business look
+                trustworthy, professional and ready
+                for today's customers.
+
+            </p>
+
+
+        </article>
+
+
+    </div>
+
+
+
+    <!-- =================================
+         CALL TO ACTION
+    ================================== -->
+
+    <div class="services-cta">
+
+
+        <p class="section-label">
+            Start Your Project
+        </p>
+
+
+        <h2>
+            Ready to take your business online?
+        </h2>
+
+
+        <p>
+
+            Let's create a website that gives
+            your business the professional
+            online presence it deserves.
+
+        </p>
+
+
+        <a
+            href="/contact"
+            class="btn primary"
+        >
+            Start Your Project
+        </a>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =================================
+     FOOTER
+================================== -->
+
+<footer>
+
+
+    <h3>
+        NtshuxekoDev
+    </h3>
+
+
+    <p>
+        Web development for small businesses.
+    </p>
+
+
+    <p>
+
+        &copy;
+
+        <span id="year"></span>
+
+        NtshuxekoDev
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- =================================
+     JAVASCRIPT
+================================== -->
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+
+</body>
+
+</html>

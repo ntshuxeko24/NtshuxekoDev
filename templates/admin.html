@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NtshuxekoDev | Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+    <!-- ============================= -->
+    <!-- ADMIN NAVIGATION -->
+    <!-- ============================= -->
+
+    <nav>
+
+        <a href="/" class="logo">
+            Ntshuxeko<span>Dev</span>
+        </a>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="/">View Website</a>
+            </li>
+
+            <li>
+                <a href="/contact">Contact Page</a>
+            </li>
+
+            <li>
+                <a href="/admin-logout">Logout</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ============================= -->
+    <!-- ADMIN DASHBOARD -->
+    <!-- ============================= -->
+
+    <main class="page admin-page">
+
+        <section class="page-header">
+
+            <p class="section-label">
+                Admin Dashboard
+            </p>
+
+            <h1>Customer Enquiries</h1>
+
+            <p>
+                Manage and review messages submitted through
+                the NtshuxekoDev website.
+            </p>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- TOTAL ENQUIRIES -->
+        <!-- ============================= -->
+
+        <section class="admin-summary">
+
+            <div class="admin-stat">
+
+                <p>Total Enquiries</p>
+
+                <h2>{{ enquiries|length }}</h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- ENQUIRIES -->
+        <!-- ============================= -->
+
+        <section class="admin-enquiries">
+
+            {% if enquiries %}
+
+                {% for enquiry in enquiries %}
+
+                    <article class="enquiry-card">
+
+                        <div class="enquiry-header">
+
+                            <div>
+
+                                <p class="section-label">
+                                    Enquiry #{{ enquiry.id }}
+                                </p>
+
+                                <h2>
+                                    {{ enquiry.name }}
+                                </h2>
+
+                            </div>
+
+                            <span class="enquiry-date">
+                                {{ enquiry.created_at }}
+                            </span>
+
+                        </div>
+
+
+                        <div class="enquiry-details">
+
+                            <div>
+
+                                <h3>Email</h3>
+
+                                <a href="mailto:{{ enquiry.email }}">
+                                    {{ enquiry.email }}
+                                </a>
+
+                            </div>
+
+
+                            <div>
+
+                                <h3>Message</h3>
+
+                                <p>
+                                    {{ enquiry.message }}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ============================= -->
+                        <!-- ENQUIRY ACTIONS -->
+                        <!-- ============================= -->
+
+                        <div class="enquiry-actions">
+
+                            <a
+                                href="mailto:{{ enquiry.email }}"
+                                class="btn primary">
+
+                                Reply by Email
+
+                            </a>
+
+
+                            <form
+                                action="{{ url_for('delete_enquiry', enquiry_id=enquiry.id) }}"
+                                method="POST"
+                                style="display: inline;">
+
+                                <button
+                                    type="submit"
+                                    class="btn"
+                                    onclick="return confirm('Are you sure you want to delete this enquiry?');">
+
+                                    Delete
+
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </article>
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="empty-enquiries">
+
+                    <h2>No enquiries yet</h2>
+
+                    <p>
+                        Customer messages will appear here when
+                        someone submits the contact form.
+                    </p>
+
+                </div>
+
+            {% endif %}
+
+        </section>
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
+
+    <footer class="footer">
+
+        <p>
+
+            &copy;
+
+            <span id="year"></span>
+
+            NtshuxekoDev. All rights reserved.
+
+        </p>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
+

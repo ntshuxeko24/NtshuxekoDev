@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Learn about Ntshuxeko Tshabalala's educational background and studies in Mathematical Science."
+    >
+
+    <meta
+        name="author"
+        content="Ntshuxeko Tshabalala"
+    >
+
+    <title>
+        NtshuxekoDev | Education
+    </title>
+
+    <!-- Flask loads CSS from the static folder -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     NAVIGATION
+================================== -->
+
+<nav aria-label="Main navigation">
+
+
+    <div class="logo">
+
+        Ntshuxeko<span>Dev</span>
+
+    </div>
+
+
+    <ul
+        class="nav-links"
+        id="navLinks"
+    >
+
+
+        <li>
+
+            <a href="/">
+                Home
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="/services">
+                Services
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="/about">
+                About
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a
+                href="/education"
+                class="active"
+                aria-current="page"
+            >
+                Education
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="/contact">
+                Contact
+            </a>
+
+        </li>
+
+
+    </ul>
+
+
+    <!-- Mobile menu button -->
+
+    <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+    >
+        ☰
+    </button>
+
+
+</nav>
+
+
+
+<!-- =================================
+     EDUCATION PAGE
+================================== -->
+
+<main class="page">
+
+
+    <p class="section-label">
+        My Education
+    </p>
+
+
+    <h1>
+        Education
+    </h1>
+
+
+    <p class="section-description">
+
+        My academic background continues to
+        strengthen my mathematical, analytical
+        and problem-solving skills.
+
+    </p>
+
+
+
+    <!-- =================================
+         EDUCATION CARDS
+    ================================== -->
+
+    <div class="education-container">
+
+
+        <!-- =================================
+             UNIVERSITY
+        ================================== -->
+
+        <article class="education-card">
+
+
+            <div
+                class="education-number"
+                aria-hidden="true"
+            >
+                01
+            </div>
+
+
+            <h2>
+                BSc in Mathematical Science
+            </h2>
+
+
+            <h3>
+                University of Limpopo
+            </h3>
+
+
+            <p>
+
+                Currently studying BSc in
+                Mathematical Science, developing
+                strong skills in mathematics,
+                statistics, computer science and
+                problem-solving.
+
+            </p>
+
+
+        </article>
+
+
+
+        <!-- =================================
+             HIGH SCHOOL
+        ================================== -->
+
+        <article class="education-card">
+
+
+            <div
+                class="education-number"
+                aria-hidden="true"
+            >
+                02
+            </div>
+
+
+            <h2>
+                Rivubye High School
+            </h2>
+
+
+            <h3>
+                2019 – 2023
+            </h3>
+
+
+            <p>
+
+                Completed my high school education
+                and developed the academic foundation
+                that led me to pursue Mathematical
+                Science at university.
+
+            </p>
+
+
+        </article>
+
+
+    </div>
+
+
+</main>
+
+
+
+<!-- =================================
+     FOOTER
+================================== -->
+
+<footer>
+
+
+    <h3>
+        NtshuxekoDev
+    </h3>
+
+
+    <p>
+        Web development for small businesses.
+    </p>
+
+
+    <p>
+
+        &copy;
+
+        <span id="year"></span>
+
+        NtshuxekoDev
+
+    </p>
+
+
+</footer>
+
+
+
+<!-- =================================
+     JAVASCRIPT
+================================== -->
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+
+</body>
+
+</html>
